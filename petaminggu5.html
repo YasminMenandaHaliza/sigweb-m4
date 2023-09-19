@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rekomendasi Tempat Nugas di sekitar UGM</title>
+	<link rel="stylesheet" href="leaflet/leaflet.css"/>
+	<script src="leaflet/leaflet.js"></script>
+
+	<!-- Google fonts-->
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
+	
+	<style>
+		html, body, section
+		{
+			position: relative;
+			height: 100%;
+			background-color: #4db69b;
+		}
+	
+		html
+		{
+			scroll-behavior: smooth;
+		}
+	
+		#map {
+		width: 1000px;
+		height: 500px;
+		margin-top: 100px;
+		} 
+	 </style>
+</head>
+<body>
+<!-- Navigation-->
+<nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
+	<div class="container">
+		<div class="collapse navbar-collapse" id="navbarResponsive">
+			<ul class="navbar-nav ms-auto">
+				<li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="https://yasminmenandahaliza.github.io/sigweb-m4/">Beranda</a></li>
+			</ul>
+		</div>
+	</div>
+</nav>
+	<center>  
+		<h2 class="masthead-heading text-uppercase mb-0"; style="color: aliceblue;">Peta Rekomendasi Tempat Nugas di Sekitar UGM</h2>
+		<p class="masthead-heading text-uppercase mb-0"; style="color: aliceblue;"> Pada peta di bawah ini disajikan beberapa tempat menarik di UGM yang dapat dikunjungi oleh mahasiswa UGM sebagai tempat mengerjakan tugas atau berdiskusi.</p>
+	</center>
+	<center> <div id="map"> </div> </center>
+	<script>
+		var map = L.map('map',{
+		center: [-7.7659, 110.3787],
+		zoom: 12
+		});
+
+		L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {attribution: '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'}).addTo(map);
+
+		var marker1 = L.marker([ -7.76527, 110.37223 ]).bindPopup('SGLC').addTo(map);
+		var marker2 = L.marker([ -7.76425 , 110.37254 ]).bindPopup('Taman Infra').addTo(map);
+		var marker3 = L.marker([ -7.76591, 110.37244 ]).bindPopup('Perpustakaan Fakultas Teknik UGM').addTo(map);
+		var marker4 = L.marker([ -7.76923, 110.37815 ]).bindPopup('Perpustakaan UGM').addTo(map);
+		var marker5 = L.marker([ -7.77009, 110.37782 ]).bindPopup('Grha Sabda Pramana').addTo(map);
+		var marker6 = L.marker([ -7.77335, 110.38000 ]).bindPopup('Masjid Kampus UGM').addTo(map);
+		var marker7 = L.marker([ -7.77266, 110.37845]).bindPopup('Direktorat Teknologi Informasi (DTI) UGM').addTo(map);
+		var marker8 = L.marker([ -7.76924, 110.38249 ]).bindPopup('Lembah UGM').addTo(map);
+		var marker9 = L.marker([ -7.76779, 110.38085 ]).bindPopup('Zomia Co-Working Space').addTo(map);
+	
+
+		var marker10 = L.marker([-7.76436, 110.38774 ]).bindPopup('Bento Kopi Klebengan').addTo(map);
+		var marker10 = L.marker([-7.75629, 110.37345 ]).bindPopup('Bento Kopi Pogung').addTo(map);
+
+	</script>
+ 	<!-- Copyright Section-->
+ 	<center> 
+		<div class="container"; style="color: aliceblue;"><small>Copyright &copy; Yasmin Menanda Haliza 2023</small></div>
+	</div>
+	</center>
+</body>
+</html>
